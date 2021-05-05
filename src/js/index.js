@@ -130,7 +130,7 @@ const api1 = function (res) {
                 <div class="col-lg-6">
                     <div class="item item--type1">
                         <div class="item__img">
-                            <img src="media/item01.jpg" alt="restaurant">
+                            <img src="./dist/media/item01.jpg" alt="restaurant">
                         </div>
                         <div class="item__dis">
                             <h6 class="sub-title item__name">${myList[i].name}</h6>
