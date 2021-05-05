@@ -1,4 +1,5 @@
 import "../scss/style.scss";
+
 /*
 // W3school ajax in their server
 const btn = document.getElementById("btn");
