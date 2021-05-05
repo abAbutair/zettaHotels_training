@@ -1,5 +1,5 @@
 import "../scss/style.scss";
-
+import "../vendors.css";
 /*
 // W3school ajax in their server
 const btn = document.getElementById("btn");
