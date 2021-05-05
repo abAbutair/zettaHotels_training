@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Metas -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-compatible" content="ie=edge" />
-
-    <!-- CSS Plugins -->
-    <!-- <link
-      rel="stylesheet"
-      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="node_modules/daterangepicker/daterangepicker.css"
-    />
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" />
-    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css" /> -->
-
-    <!-- Main CSS-->
-    <!-- <link rel="stylesheet" href="./dist/css/style_ltr.css" /> -->
-
-    <!-- Icon, Title -->
     <link rel="icon" href="./src/images/icon.png" type="image/x-icon" />
     <title>Zetta Hotels</title>
   </head>
@@ -902,64 +884,6 @@
     </footer>
     <!-- End of Footer -->
 
-    <!-- core scripts -->
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="node_modules/daterangepicker/moment.min.js"></script>
-
-    <!-- Custom bootstrap scripts -->
-    <script src="node_modules/bootstrap/js/dist/util.js"></script>
-    <script src="node_modules/bootstrap/js/dist/dropdown.js"></script>
-    <script src="node_modules/bootstrap/js/dist/carousel.js"></script>
-
-    <!-- Page plugins scripts -->
-    <!--<script src="node_modules/select2/dist/js/select2.full.min.js"></script>-->
-    <script src="node_modules/daterangepicker/daterangepicker.js"></script>
-    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-    <script src="node_modules/wowjs/dist/wow.min.js"></script>
-
-    <!-- init scripts -->
-    <script>
-      $(function () {
-        $('input[name="datePicker"]').daterangepicker({
-          singleDatePicker: true,
-          autoApply: true,
-          autoUpdateInput: false,
-        });
-      });
-    </script>
-    <script>
-      $(document).ready(function () {
-        $(".owl-carousel--type1").owlCarousel({
-          nav: true,
-          dots: false,
-          items: 4,
-          margin: 15,
-          // animateOut: 'slideOutDown',
-          // animateIn:'flipInX'
-        });
-        $(".owl-carousel--type2").owlCarousel({
-          nav: true,
-          dots: false,
-          items: 5,
-          margin: 0,
-          // animateOut: 'slideOutDown',
-          // animateIn:'flipInX'
-        });
-      });
-    </script>
-    <script>
-      new WOW().init();
-    </script>
-    <script type="text/javascript">
-      var carousel1 = $("#forControls02").carousel();
-      var carousel2 = $("#forControls03").carousel();
-      carousel1.on("slide.bs.carousel", function (event) {
-        var to = $(event.relatedTarget).index();
-        carousel2.carousel(to);
-      });
-    </script>
-    <!-- Main scripts -->
     <script src="./dist/js/bundle.js"></script>
   </body>
 </html>

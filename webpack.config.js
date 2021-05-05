@@ -1,5 +1,6 @@
 const path = require("path");
 // const { NetlifyPlugin } = require("netlify-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
   entry: "./src/js/index.js",
@@ -66,6 +67,17 @@ module.exports = {
           },
         ],
       },
+      // {
+      //   // test: require.resolve("wowjs/dist/wow.js"),
+      //   // loader: "exports?this.WOW",
+      // },
     ],
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery",
+    }),
+  ],
 };
