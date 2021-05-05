@@ -4,7 +4,7 @@ const { NetlifyPlugin } = require("netlify-webpack-plugin");
 module.exports = {
   entry: "./src/js/index.js",
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "dist"),
     filename: "js/bundle.js",
   },
   plugins: [
