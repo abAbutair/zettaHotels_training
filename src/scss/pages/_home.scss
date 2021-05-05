@@ -1,0 +1,224 @@
+.section {
+  &--welcome {
+    .slider {
+      height: 87vh;
+    }
+    .carousel {
+      height: 100%;
+      &-inner {
+        height: 100%;
+      }
+      &-item {
+        height: 100%;
+        &:before {
+          @include dimmedBG($black, 0.3);
+          z-index: -1;
+        }
+        .container {
+          height: 100%;
+          @extend %d-flex;
+          @extend %align-items;
+        }
+      }
+      &__caption {
+        color: $textFC2;
+        > * {
+          &:not(:last-child) {
+            margin-bottom: 2rem;
+          }
+        }
+        h5 {
+          font-size: $extraLargeFS;
+          line-height: 1.25;
+          span {
+            display: block;
+          }
+        }
+        p {
+          margin: 0;
+          font-family: $regFont;
+          width: 40%;
+          max-height: 6.5rem;
+          overflow: hidden;
+        }
+      }
+    }
+    .carousel-control {
+      justify-content: flex-end;
+      position: absolute;
+      top: -5.1rem;
+      #{$right}: 1.5rem;
+    }
+    .reservation-form {
+      @include translate(0, -50%);
+      z-index: 10;
+      position: relative;
+      .container {
+        position: relative;
+      }
+      .form {
+        background-color: $white;
+        box-shadow: 0 1.5rem 3rem 0 rgba($black, 0.1);
+        padding: 4rem 8%;
+        @extend %d-flex;
+        @include v-flex(flex-end);
+        justify-content: space-between;
+        &__btn {
+          width: 5.1rem;
+          margin-#{$left}: 3rem;
+        }
+        .row {
+          width: 100%;
+        }
+      }
+    }
+  }
+  &--bg {
+    @extend %covered_bg;
+    position: relative;
+    z-index: 1;
+    &:before {
+      @include dimmedBG($black, 0.3);
+      z-index: -1;
+    }
+  }
+  &--two-carousels {
+    background-color: $mainBG;
+    position: relative;
+    &__1 {
+      padding-#{$right}: 40%;
+    }
+    &__2 {
+      position: absolute;
+      top: 0;
+      #{$right}: 0;
+      width: 45%;
+      height: 100%;
+      .carousel {
+        &-inner {
+          height: 100%;
+        }
+        &-item {
+          height: 100%;
+        }
+      }
+    }
+    .carousel {
+      &-control {
+        position: absolute;
+        bottom: 0;
+        z-index: 15;
+        #{$left}: -5.1rem;
+        &__prev {
+          background-color: $mainClr;
+        }
+        &__next {
+          background-color: $white;
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  &__p {
+    @include v-flex(center);
+    &__img {
+      width: 5.7rem;
+      height: 5.7rem;
+      @include border-radius(50%);
+      margin-#{$right}: 2rem;
+      @include v-flex(center);
+      justify-content: center;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__dis {
+    width: 70%;
+  }
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.item {
+  @include v-flex(center);
+  background-color: $mainBG;
+  position: relative;
+  padding-#{$right}: 5.1rem;
+  &--type2 {
+    .item__link {
+      height: 100%;
+      a {
+        height: 100%;
+      }
+    }
+  }
+  &--type3 {
+    display: block;
+    padding: 0;
+    @include transition(all, 0.3s);
+    &:hover {
+      box-shadow: 0 0 0.5rem 0.01rem rgba($mainClr, 0.5);
+    }
+
+    .item {
+      &__img {
+        width: 100%;
+        height: 22rem;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__dis {
+        width: 100%;
+        text-align: center;
+        p {
+          color: $bodyFC;
+        }
+      }
+    }
+  }
+  &__img {
+    width: 17rem;
+    height: 19rem;
+    overflow: hidden;
+    @include v-flex(center);
+    justify-content: center;
+    img {
+      height: 100%;
+    }
+  }
+  &__dis {
+    width: calc(100% - 17rem);
+    padding: 2rem;
+    .sub-title {
+      margin-bottom: 0;
+    }
+    .primary-title {
+      margin-bottom: 1.2rem;
+    }
+    p {
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  &__link {
+    position: absolute;
+    bottom: 0;
+    #{$right}: 0;
+  }
+  &__name, &__body {
+    max-height: 20px;
+    overflow: hidden;
+  }
+}
+

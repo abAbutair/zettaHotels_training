@@ -1,0 +1,29 @@
+*, *::after, *::before {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  direction: $isRtl;
+}
+
+html {font-size: 62.5%;}
+
+body {box-sizing: border-box;}
+
+html, body {height: 100%}
+
+a {display: inline-block;}
+
+ul, ol {
+  margin: 0;
+  li {
+    list-style: none;
+  }
+}
+button {
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+}

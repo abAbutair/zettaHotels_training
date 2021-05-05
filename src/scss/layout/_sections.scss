@@ -1,0 +1,32 @@
+.section {
+  &--padding {
+    padding: 5rem 0;
+  }
+  &--padding-top {
+    padding: 5rem 0 0;
+  }
+
+  &--padding-big {
+    padding: 7.5rem 0;
+  }
+  &--grayBG {
+    background-color: #F8F8F8;
+  }
+  &--welcome {
+    height: 100vh;
+  }
+  &--internals-welcome {
+    padding: 15rem 0 4rem;
+    position: relative;
+    z-index: 1;
+    @extend %covered_bg;
+    &:before {
+      @include dimmedBG($black, 0.65);
+      z-index: -1;
+    }
+    .section-title {
+      text-transform: capitalize;
+    }
+  }
+}
+

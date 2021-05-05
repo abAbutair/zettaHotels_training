@@ -1,0 +1,72 @@
+body {
+  font-family: $bodyFontMed;
+  color: $bodyFC;
+  font-size: $bodyFS;
+  text-align: $left;
+}
+
+a {
+  &:hover {
+    text-decoration: none
+  }
+}
+
+.sub-title {
+  color: $mainClr;
+  font-size: $placeholderFS;
+  text-transform: uppercase;
+  font-family: $boldFont;
+}
+
+.section-title {
+  font: {
+    size: $sectionTitleFS;
+    family: $extraBoldFont;
+  }
+  color: $textFC1;
+  line-height: 1.25;
+  margin-bottom: 2.5rem;
+  span {
+    display: block;
+  }
+  &--white {
+    color: $textFC2;
+  }
+}
+
+.primary-title {
+  font-size: $blocksTitleFS;
+  font-family: $semiB-Font;
+  color: $textFC1;
+}
+.footer-title {
+  font-size: $blocksTitleFS;
+  font-family: $semiB-Font;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+  color: $textFC2;
+}
+
+article {
+  color: $textFC1;
+  p {
+    &:not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+.strong {
+  font-family: $bodyFontMed;
+  font-size: $bodyFS-l;
+}
+
+.link-primary {
+  @include transition(all, 0.3s);
+  color: $mainClr;
+  &:hover {
+    color: lighten($mainClr, 10%);
+  }
+  &--white {
+    color: $textFC2;
+  }
+}

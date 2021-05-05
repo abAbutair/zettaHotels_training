@@ -1,0 +1,150 @@
+.carousel {
+  &-item {
+    @extend %covered_bg;
+    position: relative;
+  }
+  &-control {
+    @extend %d-flex;
+    &__next, &__prev {
+      width: 5.1rem;
+      height: 5.1rem;
+      background-color: $white;
+      @include transition(all, 0.5s);
+      @extend %d-flex;
+      @extend %align-items;
+      justify-content: center;
+      i {
+        color: $textFC1;
+        font-size: 2rem;
+      }
+      &:hover {
+        background-color: $mainClr;
+      }
+      &:focus {
+        background-color: $mainClr;
+      }
+    }
+  }
+  &-indicators {
+    position: static;
+    right: unset;
+    left: unset;
+    top: unset;
+    bottom: unset;
+    margin: 0;
+    justify-content: flex-start;
+    li {
+      margin: {
+        left: 0.6rem;
+        right: 0.6rem;
+      };
+      width: 1rem;
+      height: 1rem;
+      @include border-radius(50%);
+      background-color: $scdBG;
+      &.active {
+        background-color: $mainClr;
+      }
+    }
+  }
+}
+
+// -- Owl Carousel --
+.owl-carousel {
+  &--type1 {
+    margin-top: 5rem;
+  }
+  &--type2 {
+    &.owl-carousel {
+      .owl-block {
+        @extend %covered_bg;
+        padding-top: 100%;
+        display: block;
+      }
+      .owl-nav {
+        button {
+          &.owl-prev, &.owl-next {
+            background-color: $mainClr;
+            &:before {
+              color: $textFC1;
+            }
+          }
+          &.owl-prev {
+            #{$left}: 9rem;
+          }
+          &.owl-next {
+            #{$right}: 9rem;
+
+          }
+        }
+      }
+    }
+  }
+  .owl-nav {
+    button {
+      &.owl-prev, &.owl-next {
+        position: absolute;
+        top: 50%;
+        font-size: $blocksTitleFS;
+        line-height: 1;
+        width: 6rem;
+        height: 6rem;
+        @include translate(0, -50%);
+        background-color: $white;
+        &.disabled {
+          opacity: .3;
+        }
+        &:before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: $mainClr;
+        }
+        span {
+          display: none;
+        }
+      }
+      &.owl-prev {
+        #{$left}: -9rem;
+        &:before {
+          content: $arrow-left;
+        }
+      }
+      &.owl-next {
+        #{$right}: -9rem;
+        &:before {
+          content: $arrow-right;
+        }
+      }
+    }
+  }
+}
+.owl-block {
+  background-color: $white;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-height: 27rem;
+  > * {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__img {
+    background-color: $mainClr;
+    font-size: $footerBlocksFS;
+    color: $textFC1;
+    width: 6rem;
+    height: 6rem;
+    margin: auto {
+      top: 0;
+      bottom: 0;
+    };
+    @include v-flex(center);
+    justify-content: center;
+    @include border-radius(50%);
+    overflow: hidden;
+  }
+  p {
+    overflow: hidden;
+    max-height: 6.5rem;
+  }
+}

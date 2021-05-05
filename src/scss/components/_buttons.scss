@@ -1,0 +1,51 @@
+  .btn {
+    font-size: $bodyFS;
+    color: $textFC2;
+    @include transition(all, 0.5s);
+
+    &--squared {
+      width: 5.1rem;
+      height: 5.1rem;
+      @extend %d-flex;
+      @extend %align-items;
+      justify-content: center;
+      i {
+        color: $textFC2;
+        font-size: 2rem;
+      }
+    }
+    &--regular {
+      padding: 1.5rem 7rem;
+      i {
+        margin-#{$left}: 1rem;
+      }
+    }
+    &--default {
+      background-color: $mainClr;
+
+      &:hover {
+        color: darken($textFC2, 10%);
+
+      }
+    }
+  }
+
+.my-pagination {
+  @extend %d-flex;
+  justify-content: center;
+  .btn {
+    padding: 1rem;
+    height: 3.5rem;
+    @extend %d-flex;
+    justify-content: center;
+    align-items: center;
+    &.active {
+      background-color: $footerBG;
+    }
+  }
+  .page-item {
+    &:not(:last-child) {
+      margin-#{$right}: 1rem;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+// placeholder
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin placeHolder {
+  @include optional-at-root ('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root (':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root ('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root (':-ms-input-placeholder') {
+    @content;
+  }
+}
+// end of place holder
+
+@mixin prefix ($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+  #{$property}: $value;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin border-radius-all($radius1, $radius2, $radius3, $radius4) {
+  -webkit-border-radius: $radius1 $radius2 $radius3 $radius4;
+  -moz-border-radius: $radius1 $radius2 $radius3 $radius4;
+  -ms-border-radius: $radius1 $radius2 $radius3 $radius4;
+  border-radius: $radius1 $radius2 $radius3 $radius4;
+}
+@mixin translate($x, $y) {
+  -webkit-transform: translate( $x, $y);
+  -moz-transform: translate( $x, $y);
+  -ms-transform: translate( $x, $y);
+  -o-transform: translate( $x, $y);
+  transform: translate( $x, $y);
+}
+@mixin translateImportant($x, $y) {
+  -webkit-transform: translate( $x, $y) !important;
+  -moz-transform: translate( $x, $y) !important;
+  -ms-transform: translate( $x, $y) !important;
+  -o-transform: translate( $x, $y) !important;
+  transform: translate( $x, $y) !important;
+}
+
+@mixin transition($property, $speed)  {
+  -webkit-transition: ($property) ($speed);
+  -moz-transition: ($property) ($speed);
+  -ms-transition: ($property) ($speed);
+  -o-transition: ($property) ($speed);
+  transition: ($property) ($speed);
+}
+@mixin delay($x){
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  -ms-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin scale($x, $y) {
+  -webkit-transform: scale( $x, $y);
+  -moz-transform: scale( $x, $y);
+  -ms-transform: scale( $x, $y);
+  -o-transform: scale( $x, $y);
+  transform: scale( $x, $y);
+}
+@mixin v-flex($align) {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: ($align);
+  -moz-box-align: ($align);
+  -ms-flex-align: ($align);
+  -webkit-align-items: ($align);
+  align-items: ($align);
+}
+
+@mixin headline($color, $size) {
+  color: $color;
+  font-size: $size;
+}
+@mixin dimmedBG ($color, $opacity) {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color, $opacity);
+}

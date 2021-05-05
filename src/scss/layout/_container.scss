@@ -1,0 +1,11 @@
+.container {
+  @include con-breakpoint(xl) {
+    max-width: 1200px;
+  }
+  @include con-breakpoint(xxl) {
+    max-width: 1400px;
+  }
+  @include con-breakpoint(xxxl) {
+    max-width: 1600px;
+  }
+}

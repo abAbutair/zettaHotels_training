@@ -1,0 +1,46 @@
+.form {
+  &--room {
+    .row {
+      align-items: flex-end;
+    }
+    .form__btn {
+      width: 100%;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+  &--contact-us {
+    .textarea {
+      height: 100%;
+    }
+    .form__el {
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.input, .textarea {
+  height: 5.1rem;
+  width: 100%;
+  border: none;
+  background-color: $inputsBG;
+  color: $textFC1;
+  padding: 0.5rem 1.5rem;
+  @include transition(all, 0.5s);
+  @include placeHolder {
+    font-size: $placeholderFS;
+    color: $placeholderFC;
+  }
+  &:focus {
+    box-shadow: 0 .2rem 0 0 #5863F8;
+  }
+}
+.textarea {
+  min-height: 10rem;
+}
+.invalid-tooltip {
+  display: none;
+}

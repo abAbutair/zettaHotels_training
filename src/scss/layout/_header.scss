@@ -1,0 +1,40 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 2rem 0;
+  .container {
+    @extend %d-flex;
+    justify-content: space-between;
+  }
+  .nav {
+    ul {
+      @extend %d-flex;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-#{$right}: 1rem;
+      }
+    }
+    &__link {
+      padding: 0.5rem 1rem;
+      color: $textFC2;
+      font-size: $bodyFS-s;
+      text-transform: uppercase;
+      font-family: $semiB-Font;
+      &.active {
+        color: $mainClr;
+      }
+    }
+  }
+}
+.logo {
+  a {
+    padding: 0.5rem 1rem;
+    color: $textFC2;
+    font-family: $semiB-Font;
+    text-transform: capitalize;
+  }
+}

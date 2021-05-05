@@ -1,0 +1,35 @@
+{
+  "name": "tr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/abdulrahman-abutair/tr.git"
+  },
+  "author": "Abdulrahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/abdulrahman-abutair/tr/issues"
+  },
+  "homepage": "https://gitlab.com/abdulrahman-abutair/tr#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "animate.css": "^4.1.1",
+    "bootstrap": "^4.5.3",
+    "daterangepicker": "^3.1.0",
+    "jquery": "^3.5.1",
+    "owl.carousel": "^2.3.4",
+    "popper.js": "^1.16.1",
+    "select2": "^4.0.13",
+    "wowjs": "^1.1.3"
+  },
+  "devDependencies": {
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
