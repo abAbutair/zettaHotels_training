@@ -1,6 +1,6 @@
 import "jquery/dist/jquery";
 import "popper.js/dist/umd/popper";
-import "daterangepicker/moment.min.js";
+// import "daterangepicker/moment.min.js";
 import "bootstrap/js/dist/util";
 import "bootstrap/js/dist/dropdown";
 import "bootstrap/js/dist/carousel";
