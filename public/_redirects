@@ -1,0 +1,2 @@
+/old-path    path=:path    /new-path    301    Language=en,es    Country=US
+/api/*    https://us-central1-netlify-intercom.cloudfunctions.net/readHeaders/:splat    200!    Role=admin,cms
