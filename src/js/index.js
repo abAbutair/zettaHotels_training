@@ -1,3 +1,4 @@
+import "../scss/style.scss";
 /*
 // W3school ajax in their server
 const btn = document.getElementById("btn");
@@ -34,7 +35,6 @@ const apiHTML = document.querySelector(".api-tr");
 
 const xHttp = new XMLHttpRequest();
 xHttp.onreadystatechange = function () {
-  console.log(this.readyState, this.status);
   if (this.readyState === 4 && this.status === 200) {
     api1(this.response);
   }
@@ -130,7 +130,7 @@ const api1 = function (res) {
                 <div class="col-lg-6">
                     <div class="item item--type1">
                         <div class="item__img">
-                            <img src="./dist/media/item01.jpg" alt="restaurant">
+                            <img src="./src/media/item01.jpg" alt="restaurant">
                         </div>
                         <div class="item__dis">
                             <h6 class="sub-title item__name">${myList[i].name}</h6>
@@ -152,3 +152,6 @@ const api1 = function (res) {
 
   apiBuild();
 };
+
+const zxz = 23;
+console.log(zxz);
