@@ -8,4 +8,12 @@ module.exports = {
     filename: "js/bundle.js",
   },
   plugins: [new NetlifyPlugin({})],
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.s[ac]ss$/i,
+  //       use: ["style-loader", "css-loader", "sass-loader"],
+  //     },
+  //   ],
+  // },
 };
