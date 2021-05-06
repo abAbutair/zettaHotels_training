@@ -13,7 +13,7 @@
       @extend %d-flex;
       @extend %align-items;
       justify-content: center;
-      i {
+      i, svg {
         color: $textFC1;
         font-size: 2rem;
       }

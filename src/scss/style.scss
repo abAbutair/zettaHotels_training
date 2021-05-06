@@ -43,31 +43,22 @@
 //@import "~bootstrap/scss/type";
 //@import "~bootstrap/scss/utilities";
 
-//-- Other Vendors--//
-// @import "~@fortawesome/fontawesome-free/scss/fontawesome";
-@import "~select2/src/scss/core";
-// @import "~owl.carousel/src/scss/owl.carousel.scss";
-// @import "~owl.carousel/src/scss/owl.theme.default.scss";
 
 // abstracts //////
-@import "abstracts/variables", "abstracts/font-family", "abstracts/translate",
-  "abstracts/functions", "abstracts/mixins", "abstracts/partials",
-  "abstracts/placeholders", "abstracts/utilities", "abstracts/breakpoints";
+@import "./abstracts/variables", "./abstracts/font-family",
+  "./abstracts/translate", "./abstracts/functions", "./abstracts/mixins",
+  "./abstracts/partials", "./abstracts/placeholders", "./abstracts/utilities",
+  "./abstracts/breakpoints";
 
 // base //////
-@import "base/reset", "base/typography", "base/animation";
+@import "./base/reset", "./base/typography", "./base/animation";
 
 // layout //////
-@import "layout/grid", "layout/container", "layout/header", "layout/footer",
-  "layout/forms", "layout/sections";
+@import "./layout/grid", "./layout/container", "./layout/header",
+  "./layout/footer", "./layout/forms", "./layout/sections";
 
 // components //////
-@import "components/buttons", "components/carousel", "components/bgs";
+@import "./components/buttons", "./components/carousel", "./components/bgs";
 
 // pages //////
-@import "pages/home", "pages/internals";
-
-// themes //////
-//@import
-// 'themes/theme',
-// 'themes/admin';
+@import "./pages/home", "./pages/internals";

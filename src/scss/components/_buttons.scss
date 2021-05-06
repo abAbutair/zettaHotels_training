@@ -9,14 +9,14 @@
       @extend %d-flex;
       @extend %align-items;
       justify-content: center;
-      i {
+      i, svg {
         color: $textFC2;
         font-size: 2rem;
       }
     }
     &--regular {
       padding: 1.5rem 7rem;
-      i {
+      i, svg {
         margin-#{$left}: 1rem;
       }
     }

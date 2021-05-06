@@ -1,19 +1,3 @@
-import "jquery/dist/jquery";
-import "popper.js/dist/umd/popper";
-// import "daterangepicker/moment.min.js";
-import "bootstrap/js/dist/util";
-import "bootstrap/js/dist/dropdown";
-import "bootstrap/js/dist/carousel";
-
-import "select2/dist/js/select2.full";
-import "daterangepicker/daterangepicker";
-import "owl.carousel/dist/owl.carousel";
-// import WOW from "wowjs/dist/wow.js";
-
-import "../vendors.css";
-
-import "../scss/style.scss";
-
 /*
 // W3school ajax in their server
 const btn = document.getElementById("btn");
@@ -54,7 +38,7 @@ xHttp.onreadystatechange = function () {
     api1(this.response);
   }
 };
-xHttp.open("GET", "https://jsonplaceholder.typicode.com/comments", true);
+xHttp.open("GET", "https://jsonplaceholder.typicode.com/photos", true);
 xHttp.send();
 
 const api1 = function (res) {
@@ -145,13 +129,13 @@ const api1 = function (res) {
                 <div class="col-lg-6">
                     <div class="item item--type1">
                         <div class="item__img">
-                            <img src="./src/media/item01.jpg" alt="restaurant">
+                            <img src=${myList[i].url} alt="restaurant">
                         </div>
                         <div class="item__dis">
-                            <h6 class="sub-title item__name">${myList[i].name}</h6>
-                            <h2 class="primary-title item__email">${myList[i].email}</h2>
+                            <h6 class="sub-title item__name">${myList[i].title}</h6>
+                            <h2 class="primary-title item__email">${myList[i].title}</h2>
                             <h2 class="primary-title item__email">${myList[i].id}</h2>
-                            <p class="item__body">${myList[i].body}</p>
+                            <p class="item__body">${myList[i].thumbnailUrl}</p>
                         </div>
                         <div class="item__link">
                             <a href="#" class="btn btn--squared btn--default">
@@ -167,41 +151,3 @@ const api1 = function (res) {
 
   apiBuild();
 };
-
-const zxz = 23;
-console.log(zxz);
-
-$(".owl-carousel--type1").owlCarousel({
-  nav: true,
-  dots: false,
-  items: 4,
-  margin: 15,
-  // animateOut: 'slideOutDown',
-  // animateIn:'flipInX'
-});
-
-$(".owl-carousel--type2").owlCarousel({
-  nav: true,
-  dots: false,
-  items: 5,
-  margin: 0,
-  // animateOut: 'slideOutDown',
-  // animateIn:'flipInX'
-});
-
-var carousel1 = $("#forControls02").carousel();
-var carousel2 = $("#forControls03").carousel();
-carousel1.on("slide.bs.carousel", function (event) {
-  var to = $(event.relatedTarget).index();
-  carousel2.carousel(to);
-});
-
-// new WOW().init();
-
-$(function () {
-  $('input[name="datePicker"]').daterangepicker({
-    singleDatePicker: true,
-    autoApply: true,
-    autoUpdateInput: false,
-  });
-});

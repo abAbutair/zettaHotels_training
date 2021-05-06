@@ -16,7 +16,7 @@
     a {
       color: $textFC2;
       text-transform: capitalize;
-      i {
+      i, svg {
         color: $mainClr;
         margin-#{$right}:1rem;
       }
@@ -43,7 +43,7 @@
       width: 3.5rem;
       height: 3.5rem;
       @include border-radius(50%);
-      i {
+      i, svg {
         margin: 0;
         color: $textFC2;
       }
