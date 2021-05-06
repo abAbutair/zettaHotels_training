@@ -37,7 +37,7 @@ module.exports = merge(common, {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({filename: "css/[name].[contentHash].css"}),
+        new MiniCssExtractPlugin({filename: "[name].[contentHash].css"}),
         new CleanWebpackPlugin(),
         new NetlifyPlugin({})
     ],

@@ -8,6 +8,18 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [
+                    {
+                        loader: "file-loader",
+                        options: {
+                            name: "fonts/[name].[contentHash].[ext]"
+                        }
+                    }
+                ]
+            },
+
+            {
                 test: /\.html$/,
                 loader: "html-loader",
                 options: {
@@ -28,18 +40,6 @@ module.exports = {
                         ]
                     }
                 }
-            },
-
-            {
-                test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "fonts/[name].[contentHash].[ext]"
-                        }
-                    }
-                ]
             },
 
             {

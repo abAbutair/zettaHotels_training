@@ -44,8 +44,4 @@ module.exports = merge(common, {
       }
     ]
   }
-  // devServer: {
-  //   publicPath: "src/assets/",
-  //   contentBase: path.join(__dirname, 'dist')
-  // }
 });
