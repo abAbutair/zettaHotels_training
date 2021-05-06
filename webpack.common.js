@@ -1,25 +1,10 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = {
     entry: {
         main: "./src/js/index.js",
         vendor: "./src/js/vendors.js"
     },
-
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/html/template.html",
-            inject: "body",
-        }),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery",
-        }),
-    ],
-
     module: {
         rules: [
             {
@@ -38,39 +23,11 @@ module.exports = {
                             {
                                 tag: 'div',
                                 attribute: 'data-background',
-                                type: 'src',
+                                type: 'src'
                             }
                         ]
                     }
                 }
-            },
-
-            {
-                test: /\.(jpg|jpeg|gif|png)$/i,
-                type: 'asset/resource',
-
-            },
-
-            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"],
-            },
-
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    {
-                        loader: "sass-loader",
-                        options: {
-                            sourceMap: true,
-                            sassOptions: {
-                                outputStyle: "compressed"
-                            }
-                        }
-                    }
-                ],
             },
 
             {
@@ -79,13 +36,16 @@ module.exports = {
                     {
                         loader: "file-loader",
                         options: {
-                            name: "[name].[contentHash].[ext]",
-                            outputPath: "fonts/",
-                        },
-                    },
-                ],
-            }
+                            name: "fonts/[name].[contentHash].[ext]"
+                        }
+                    }
+                ]
+            },
 
+            {
+                test: /\.(jpg|jpeg|gif|png)$/i,
+                type: 'asset/resource',
+            }
         ]
     }
 

@@ -1,4 +1,10 @@
-import "../vendors.css";
+// vendors
+import "owl.carousel/dist/assets/owl.carousel.css";
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 import "../scss/style.scss";
 
 import "jquery/dist/jquery";
@@ -10,12 +16,6 @@ import "bootstrap/js/dist/carousel";
 
 // import "daterangepicker/daterangepicker";
 import "owl.carousel/dist/owl.carousel";
-
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/brands';
-
 
 $(".owl-carousel--type1").owlCarousel({
     nav: true,

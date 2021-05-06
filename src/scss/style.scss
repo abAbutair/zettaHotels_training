@@ -3,7 +3,7 @@
 //-- Bootstrap --//
 // Required
 @import "~bootstrap/scss/functions", "~bootstrap/scss/variables",
-  "~bootstrap/scss/mixins";
+"~bootstrap/scss/mixins";
 
 // Optional
 //@import "~bootstrap/scss/utilities/clearfix";
@@ -44,18 +44,94 @@
 //@import "~bootstrap/scss/utilities";
 
 
+// LTR fonts - EN
+@font-face {
+  font-family: "pop-extraBold";
+  src: url("../assets/fonts/ltr/Poppins-ExtraBold.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pop-bold";
+  src: url("../assets/fonts/ltr/Poppins-Bold.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pop-semi";
+  src: url("../assets/fonts/ltr/Poppins-SemiBold.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pop-med";
+  src: url("../assets/fonts/ltr/Poppins-Medium.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pop-reg";
+  src: url("../assets/fonts/ltr/Poppins-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "pop-light";
+  src: url("../assets/fonts/ltr/Poppins-Light.ttf");
+  font-style: normal;
+}
+
+////////////////////////////////////////////////////////////
+// RTL fonts - AR
+@font-face {
+  font-family: "taj-extraBold";
+  src: url("../assets/fonts/rtl/Tajawal-Black.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "taj-bold";
+  src: url("../assets/fonts/rtl/Tajawal-ExtraBold.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "taj-semi";
+  src: url("../assets/fonts/rtl/Tajawal-Bold.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "taj-med";
+  src: url("../assets/fonts/rtl/Tajawal-Medium.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "taj-reg";
+  src: url("../assets/fonts/rtl/Tajawal-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "taj-light";
+  src: url("../assets/fonts/rtl/Tajawal-Light.ttf");
+  font-style: normal;
+}
+
+
 // abstracts //////
-@import "./abstracts/variables", "./abstracts/font-family",
-  "./abstracts/translate", "./abstracts/functions", "./abstracts/mixins",
-  "./abstracts/partials", "./abstracts/placeholders", "./abstracts/utilities",
-  "./abstracts/breakpoints";
+@import "./abstracts/variables",
+"./abstracts/translate", "./abstracts/functions", "./abstracts/mixins",
+"./abstracts/partials", "./abstracts/placeholders", "./abstracts/utilities",
+"./abstracts/breakpoints";
 
 // base //////
 @import "./base/reset", "./base/typography", "./base/animation";
 
 // layout //////
 @import "./layout/grid", "./layout/container", "./layout/header",
-  "./layout/footer", "./layout/forms", "./layout/sections";
+"./layout/footer", "./layout/forms", "./layout/sections";
 
 // components //////
 @import "./components/buttons", "./components/carousel", "./components/bgs";
