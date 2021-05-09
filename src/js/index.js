@@ -151,3 +151,6 @@ const api1 = function (res) {
 
   apiBuild();
 };
+
+const x = 23;
+console.log(x);
